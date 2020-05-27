@@ -57,11 +57,12 @@ html, body {
 	height: 100%;
 }
 
-@grey: #f5f5f5;
+@grey: #cfbcdb;
 @white: #FFF;
-@lightpurple: #fcf5ff;
-@darkpurple: #f5e0ff;
-@uglypurple:  #7d608f;;
+@lightpurple: #e9b6ff;
+@darkpurple: #e0caeb;
+@uglypurple:  #7d608f;
+@usethisfont: 'Raleway', sans-serif;
 
 .centerit() {
 	margin: 0 auto;
@@ -78,6 +79,10 @@ html, body {
 
 .border-radius() {
 	border-radius: 8px;
+}
+
+.tbl-border() {
+	border: 1px solid black;
 }
 
 .no-decor() {
@@ -99,6 +104,8 @@ html, body {
 	.centerit();
 	padding: 0 50px;
 	background: @white;
+	font-family: @usethisfont;
+	line-height: 1.5rem;
 	@media(max-width: 500px){
 		width: 100%;
 		padding: 0;
@@ -170,6 +177,7 @@ header{
 }
 
 div {
+
 	h2 {
 		font-size: 1.4rem;
 		margin-bottom: 20px;
@@ -185,14 +193,21 @@ div {
 	justify-content: space-between;
 	.border-radius();
 	padding: 50px;
+	
 	@media(max-width: 500px){
 		.flex-column();
 		justify-content: center;
+		padding: 0;
+		.centerit();
 	}
 
 	h2 {
 		width: 100px;
 		color: @uglypurple;
+		@media(max-width: 500px){
+			.centerit();
+			margin-top: 10px;
+		}
 	}
 
 	ul{
@@ -202,7 +217,10 @@ div {
 			color: @uglypurple;
 			line-height: 1.4rem;
 			@media(max-width: 500px){
-				padding: 0;
+				width: 300px;
+				.centerit();
+				padding: 2px 0;
+
 			}
 		}
 	}
@@ -210,24 +228,37 @@ div {
 
 .work-history{
 	margin-top: 80px;
-	margin-bottom: 80px;
+	margin-bottom: 50px;
 
 	table {
 		width: 100%;
 		padding: 10px 0;
 		text-align: left;
-		
-		@media(max-width: 500px){
-			margin: 20px 0;
-		} 
-		tbody{
+		border-collapse: collapse;
+		border: 1px solid black;
+
+		th {
+			font-weight: bold;
+			.tbl-border();
+			height: 40px;
+			padding-top: 10px;
+			padding-left: 10px;
+			@media(max-width: 500px){
+				padding-right: 15px;
+			} 
+		}
+
+		td {
+			height: 25px;
+			padding: 5px;
+		}
+
 			.row1{
 				background-color: @grey;
 			}
 			.row3{
 				background-color: @grey;
 			}
-		}
 	}
 }
 
@@ -240,7 +271,7 @@ div {
 	margin-bottom: 20px;
 	
 	h2 {
-		width: 175px;
+		width: 200px;
 	}
 
 }
@@ -251,7 +282,7 @@ footer{
 	justify-content: space-between;
 	background-color: @uglypurple;
 	
-	h1 {
+	h3 {
 		font-size: 1.4rem;
 		color: @white;
 		margin-left: 30px;
@@ -261,6 +292,11 @@ footer{
 		width: 50%;
 		.flex-row();
 		justify-content: space-evenly;
+		align-items: center;
+		@media(max-width: 500px){
+			margin-right: 25px;
+		} 
+
 
 		a {
 			.no-decor();
