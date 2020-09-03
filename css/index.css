@@ -1,1 +1,350 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 50px;
+  background: #FFF;
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.5rem;
+}
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+}
+header {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  justify-content: space-between;
+  background-color: #7d608f;
+}
+@media (max-width: 500px) {
+  header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
+header h1 {
+  font-size: 1.4rem;
+  color: #FFF;
+  margin-left: 30px;
+}
+@media (max-width: 500px) {
+  header h1 {
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+}
+header nav {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+@media (max-width: 500px) {
+  header nav {
+    width: 55px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+}
+header nav a {
+  text-decoration: none;
+  color: #FFF;
+}
+@media (max-width: 500px) {
+  header nav a {
+    padding: 5px;
+  }
+}
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0;
+  padding: 80px;
+  background: #e9b6ff;
+  border-radius: 8px;
+}
+@media (max-width: 500px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.about img {
+  width: 50%;
+  margin-right: 40px;
+}
+@media (max-width: 500px) {
+  .about img {
+    width: 100%;
+  }
+}
+div h2 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+@media (max-width: 500px) {
+  div h2 {
+    margin-top: 25px;
+  }
+}
+.skills {
+  background-color: #e0caeb;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 8px;
+  padding: 50px;
+}
+@media (max-width: 500px) {
+  .skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+.skills h2 {
+  width: 100px;
+  color: #7d608f;
+}
+@media (max-width: 500px) {
+  .skills h2 {
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+}
+.skills ul {
+  padding: 0;
+}
+.skills ul li {
+  color: #7d608f;
+  line-height: 1.4rem;
+}
+@media (max-width: 500px) {
+  .skills ul li {
+    width: 300px;
+    margin: 0 auto;
+    padding: 2px 0;
+  }
+}
+.work-history {
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+.work-history table {
+  width: 100%;
+  padding: 10px 0;
+  text-align: left;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+.work-history table th {
+  font-weight: bold;
+  border: 1px solid black;
+  height: 40px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+@media (max-width: 500px) {
+  .work-history table th {
+    padding-right: 15px;
+  }
+}
+.work-history table td {
+  height: 25px;
+  padding: 5px;
+}
+.work-history table .row1 {
+  background-color: #cfbcdb;
+}
+.work-history table .row3 {
+  background-color: #cfbcdb;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e9b6ff;
+  border-radius: 8px;
+  padding: 50px;
+  margin-bottom: 20px;
+}
+.contact h2 {
+  width: 200px;
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  justify-content: space-between;
+  background-color: #7d608f;
+}
+footer h3 {
+  font-size: 1.4rem;
+  color: #FFF;
+  margin-left: 30px;
+}
+footer nav {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  footer nav {
+    margin-right: 25px;
+  }
+}
+footer nav a {
+  text-decoration: none;
+  color: #FFF;
+}
